@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="menu.css" />
+<script src="script.js"></script>
+
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='http://'>Home</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Products</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>Products Sub Menu 1</a></li>
+        <li><a href='http://'>Products Sub Menu 2</a></li>
+        <li><a href='http://'>Products Sub Menu 3</a></li>
+        <li><a href='http://'>Products Sub Menu 4</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>About</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Services</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>Services Sub Menu 1</a></li>
+        <li><a href='http://'>Services Sub Menu 2</a></li>
+        <li><a href='http://'>Services Sub Menu 3</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>Contact Us</a></li>
+  </ul>
+</nav>
+
+
+
+
+<h1>Gestión de Clientes</h1>
+
+<a onclick="agregar()" href="#" class="myButton">Agregar Cliente</a>
+
+<table id="customers">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  </tbody>
+
+</table>
+
+
+
+
+<!-- Modal -->
+<div id="modal" class="modale" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h2>Datos del Cliente</h2>
+      <a onclick="cerrarModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+    </div>
+
+    <div class="modal-body">
+      <input id="txtId" type="hidden" placeholder="ID" size="20" /><br />
+      <input id="txtFirstname" type="text" placeholder="Nombre" size="20" /><br />
+      <input id="txtLastname" type="text" placeholder="Apellido" size="20" /><br />
+      <input id="txtPhone" type="text" placeholder="Teléfono" size="20" /><br />
+      <input id="txtEmail" type="text" placeholder="Email" size="20" /><br />
+      <input id="txtAddress" type="text" placeholder="Dirección" size="20" /><br />
+    </div>
+    <div class="modal-footer">
+      <a onclick="save()" href="#" class="btn">Guardar</a>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
